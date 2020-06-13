@@ -1,0 +1,9 @@
+C:\Users\dcore\source\repos\DCoreyDuke.CodeBase\obj\Debug\netstandard2.0\DCoreyDuke.CodeBase.AssemblyInfoInputs.cache
+C:\Users\dcore\source\repos\DCoreyDuke.CodeBase\obj\Debug\netstandard2.0\DCoreyDuke.CodeBase.AssemblyInfo.cs
+C:\Users\dcore\source\repos\DCoreyDuke.CodeBase\bin\Debug\netstandard2.0\DCoreyDuke.CodeBase.deps.json
+C:\Users\dcore\source\repos\DCoreyDuke.CodeBase\bin\Debug\netstandard2.0\DCoreyDuke.CodeBase.dll
+C:\Users\dcore\source\repos\DCoreyDuke.CodeBase\bin\Debug\netstandard2.0\DCoreyDuke.CodeBase.pdb
+C:\Users\dcore\source\repos\DCoreyDuke.CodeBase\obj\Debug\netstandard2.0\DCoreyDuke.CodeBase.dll
+C:\Users\dcore\source\repos\DCoreyDuke.CodeBase\obj\Debug\netstandard2.0\DCoreyDuke.CodeBase.pdb
+C:\Users\dcore\source\repos\DCoreyDuke.CodeBase\obj\Debug\netstandard2.0\DCoreyDuke.CodeBase.csprojAssemblyReference.cache
+C:\Users\dcore\source\repos\DCoreyDuke.CodeBase\obj\Debug\netstandard2.0\DCoreyDuke.CodeBase.csproj.CoreCompileInputs.cache
