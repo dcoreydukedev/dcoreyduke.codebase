@@ -7,3 +7,21 @@ C:\Users\dcore\source\repos\DCoreyDuke.CodeBase\obj\Debug\netstandard2.0\DCoreyD
 C:\Users\dcore\source\repos\DCoreyDuke.CodeBase\obj\Debug\netstandard2.0\DCoreyDuke.CodeBase.pdb
 C:\Users\dcore\source\repos\DCoreyDuke.CodeBase\obj\Debug\netstandard2.0\DCoreyDuke.CodeBase.csprojAssemblyReference.cache
 C:\Users\dcore\source\repos\DCoreyDuke.CodeBase\obj\Debug\netstandard2.0\DCoreyDuke.CodeBase.csproj.CoreCompileInputs.cache
+C:\Users\DCoreyDuke Developer\source\repos\DCoreyDuke.CodeBase\bin\Debug\netstandard2.0\DCoreyDuke.CodeBase.deps.json
+C:\Users\DCoreyDuke Developer\source\repos\DCoreyDuke.CodeBase\bin\Debug\netstandard2.0\DCoreyDuke.CodeBase.dll
+C:\Users\DCoreyDuke Developer\source\repos\DCoreyDuke.CodeBase\bin\Debug\netstandard2.0\DCoreyDuke.CodeBase.pdb
+C:\Users\DCoreyDuke Developer\source\repos\DCoreyDuke.CodeBase\obj\Debug\netstandard2.0\DCoreyDuke.CodeBase.csprojAssemblyReference.cache
+C:\Users\DCoreyDuke Developer\source\repos\DCoreyDuke.CodeBase\obj\Debug\netstandard2.0\DCoreyDuke.CodeBase.AssemblyInfoInputs.cache
+C:\Users\DCoreyDuke Developer\source\repos\DCoreyDuke.CodeBase\obj\Debug\netstandard2.0\DCoreyDuke.CodeBase.AssemblyInfo.cs
+C:\Users\DCoreyDuke Developer\source\repos\DCoreyDuke.CodeBase\obj\Debug\netstandard2.0\DCoreyDuke.CodeBase.csproj.CoreCompileInputs.cache
+C:\Users\DCoreyDuke Developer\source\repos\DCoreyDuke.CodeBase\obj\Debug\netstandard2.0\DCoreyDuke.CodeBase.dll
+C:\Users\DCoreyDuke Developer\source\repos\DCoreyDuke.CodeBase\obj\Debug\netstandard2.0\DCoreyDuke.CodeBase.pdb
+C:\Users\DCoreyDuke\source\repos\DCoreyDuke.CodeBase\bin\Debug\netstandard2.0\DCoreyDuke.CodeBase.deps.json
+C:\Users\DCoreyDuke\source\repos\DCoreyDuke.CodeBase\bin\Debug\netstandard2.0\DCoreyDuke.CodeBase.dll
+C:\Users\DCoreyDuke\source\repos\DCoreyDuke.CodeBase\bin\Debug\netstandard2.0\DCoreyDuke.CodeBase.pdb
+C:\Users\DCoreyDuke\source\repos\DCoreyDuke.CodeBase\obj\Debug\netstandard2.0\DCoreyDuke.CodeBase.csprojAssemblyReference.cache
+C:\Users\DCoreyDuke\source\repos\DCoreyDuke.CodeBase\obj\Debug\netstandard2.0\DCoreyDuke.CodeBase.AssemblyInfoInputs.cache
+C:\Users\DCoreyDuke\source\repos\DCoreyDuke.CodeBase\obj\Debug\netstandard2.0\DCoreyDuke.CodeBase.AssemblyInfo.cs
+C:\Users\DCoreyDuke\source\repos\DCoreyDuke.CodeBase\obj\Debug\netstandard2.0\DCoreyDuke.CodeBase.csproj.CoreCompileInputs.cache
+C:\Users\DCoreyDuke\source\repos\DCoreyDuke.CodeBase\obj\Debug\netstandard2.0\DCoreyDuke.CodeBase.dll
+C:\Users\DCoreyDuke\source\repos\DCoreyDuke.CodeBase\obj\Debug\netstandard2.0\DCoreyDuke.CodeBase.pdb

@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "jF3N2DFV57vXTIPglD4tmotVKJGyoKvVBXW4TvT5gnRNCwXEKCKlPuikJYDapKkJH6H3CGKQIa2zuwXQwLGK+g==",
+  "dgSpecHash": "j0qMHgh0OGP8My0lAD1tJI0p7qNE80ViO6NqKhcQf+YBKsty/sODBU17QiVtweulwQteLgq0E/8aarnqqkGIrA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dcore\\source\\repos\\DCoreyDuke.CodeBase\\DCoreyDuke.CodeBase.csproj",
+  "projectFilePath": "C:\\Users\\DCoreyDuke\\source\\repos\\DCoreyDuke.CodeBase\\DCoreyDuke.CodeBase.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\dcore\\.nuget\\packages\\filehelpers\\3.4.1\\filehelpers.3.4.1.nupkg.sha512",
-    "C:\\Users\\dcore\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\dcore\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
-    "C:\\Users\\dcore\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512"
+    "C:\\Users\\DCoreyDuke\\.nuget\\packages\\filehelpers\\3.4.1\\filehelpers.3.4.1.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\DCoreyDuke\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }
