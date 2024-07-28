@@ -15,16 +15,18 @@ namespace DCoreyDuke.CodeBase.Objects
         Work,
         Business,
         Remote,
-        Location,
+        Terminal,
+        DropLot,
+        Service,
+        TravelPlaza,
         Resource,
         Property,
-        Service,
         Other,
         Default
     }
 
     [Serializable]
-    public enum Countries
+    public enum Country
     {
         [Display(Name = "Andorra")]
         AD,
@@ -863,7 +865,8 @@ namespace DCoreyDuke.CodeBase.Objects
     public enum Gender
     {
         Male = 1,
-        Female = 2
+        Female = 2,
+        Other = 3
     }
 
     [Serializable]
@@ -1107,6 +1110,9 @@ namespace DCoreyDuke.CodeBase.Objects
     [Serializable]
     public enum State
     {
+        [Description("Unknown")]
+        Unknown = 0,
+
         [Description("Alabama")]
         AL = 1,
 

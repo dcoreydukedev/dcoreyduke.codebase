@@ -13,11 +13,11 @@ namespace DCoreyDuke.CodeBase.Objects.General
     {
         string Address1 { get; set; }
 
-        string Address2 { get; set; }
+        string? Address2 { get; set; }
 
         string City { get; set; }
 
-        string Number { get; set; }
+        string? Number { get; set; }
 
         State State { get; set; }
 
@@ -31,7 +31,7 @@ namespace DCoreyDuke.CodeBase.Objects.General
     }
 
     [ComplexType, Serializable]
-    public class Address : IAddress
+    public class Address : IAddress, IEquatable<Address>
     {
         public Address(string address1, string address2, string number, string city, State state, string zip) : this()
         {
@@ -50,19 +50,25 @@ namespace DCoreyDuke.CodeBase.Objects.General
             this.Type = type;
         }
 
-        private Address()
+        public Address()
         {
+            this.Address1 = string.Empty;
+            this.Address2 = string.Empty;
+            this.City = string.Empty;
+            this.Number = string.Empty;
+            this.State = State.Unknown;
+            this.Zip = string.Empty;
         }
 
         [Required(ErrorMessage = "Address is required"), StringLength(256, MinimumLength = 1, ErrorMessage = "Address MUST be between 1 and 256 chars.")]
         public string Address1 { get; set; }
 
-        public string Address2 { get; set; }
+        public string? Address2 { get; set; }
 
         [Required(ErrorMessage = "City is Required"), StringLength(128, MinimumLength = 1, ErrorMessage = "City MUST be between 1 and 128 chars")]
         public string City { get; set; }
 
-        public string Number { get; set; }
+        public string? Number { get; set; }
 
         [Required(ErrorMessage = "State is Required")]
         public State State { get; set; }
@@ -165,5 +171,27 @@ namespace DCoreyDuke.CodeBase.Objects.General
 
             return sb.ToString().Trim();
         }
+
+        public override string ToString()
+        {
+            return GetAddressF(this);
+        }
+
+        public bool Equals(Address other)
+        {
+            if (other == null)
+            {
+                throw new ArgumentNullException("other", "other address cannot be null");
+            }
+            else if (other == this)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
+
 }

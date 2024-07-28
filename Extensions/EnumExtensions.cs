@@ -1,5 +1,12 @@
 ﻿/*************************************************************************
  * Author: DCoreyDuke
+ * From: DcoreyDuke.CodeBase
+ * Description: Contains Enum Extensions
+ * Version: 1.0.0.0
+ * Contents:
+ *     GetAttribute(this Enum enumValue)
+ *     GetDescription(this Enum enumValue)
+ *     GetDisplayName(this Enum enumValue)
  ************************************************************************/
 
 using System;

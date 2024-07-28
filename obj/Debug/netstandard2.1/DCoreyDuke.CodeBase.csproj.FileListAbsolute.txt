@@ -1,0 +1,9 @@
+C:\Users\dcore\source\repos\dcoreydukedev\dcoreyduke.codebase\bin\Debug\netstandard2.1\DCoreyDuke.CodeBase.deps.json
+C:\Users\dcore\source\repos\dcoreydukedev\dcoreyduke.codebase\bin\Debug\netstandard2.1\DCoreyDuke.CodeBase.dll
+C:\Users\dcore\source\repos\dcoreydukedev\dcoreyduke.codebase\obj\Debug\netstandard2.1\DCoreyDuke.CodeBase.csproj.AssemblyReference.cache
+C:\Users\dcore\source\repos\dcoreydukedev\dcoreyduke.codebase\obj\Debug\netstandard2.1\DCoreyDuke.CodeBase.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dcore\source\repos\dcoreydukedev\dcoreyduke.codebase\obj\Debug\netstandard2.1\DCoreyDuke.CodeBase.AssemblyInfoInputs.cache
+C:\Users\dcore\source\repos\dcoreydukedev\dcoreyduke.codebase\obj\Debug\netstandard2.1\DCoreyDuke.CodeBase.AssemblyInfo.cs
+C:\Users\dcore\source\repos\dcoreydukedev\dcoreyduke.codebase\obj\Debug\netstandard2.1\DCoreyDuke.CodeBase.csproj.CoreCompileInputs.cache
+C:\Users\dcore\source\repos\dcoreydukedev\dcoreyduke.codebase\obj\Debug\netstandard2.1\DCoreyDuke.CodeBase.dll
+C:\Users\dcore\source\repos\dcoreydukedev\dcoreyduke.codebase\obj\Debug\netstandard2.1\DCoreyDuke.CodeBase.sourcelink.json
