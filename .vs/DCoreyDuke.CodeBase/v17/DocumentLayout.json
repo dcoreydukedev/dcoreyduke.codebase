@@ -1,0 +1,61 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\dcore\\source\\repos\\dcoreydukedev\\dcoreyduke.codebase\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{24924FD3-1117-4FD2-AE65-53D07F499D3C}|..\\DCoreyDuke.CodeBase.Apps\\DCoreyDuke.CodeBase.Apps.csproj|c:\\users\\dcore\\source\\repos\\dcoreydukedev\\dcoreyduke.codebase.apps\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21D7DFD5-82AD-4754-89D3-1FAC02D1CAEA}|DCoreyDuke.CodeBase.csproj|c:\\users\\dcore\\source\\repos\\dcoreydukedev\\dcoreyduke.codebase\\timestamp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21D7DFD5-82AD-4754-89D3-1FAC02D1CAEA}|DCoreyDuke.CodeBase.csproj|solutionrelative:timestamp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Timestamp.cs",
+              "DocumentMoniker": "C:\\Users\\dcore\\source\\repos\\dcoreydukedev\\dcoreyduke.codebase\\Timestamp.cs",
+              "RelativeDocumentMoniker": "Timestamp.cs",
+              "ToolTip": "C:\\Users\\dcore\\source\\repos\\dcoreydukedev\\dcoreyduke.codebase\\Timestamp.cs",
+              "RelativeToolTip": "Timestamp.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-29T23:22:00.176Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\dcore\\source\\repos\\dcoreydukedev\\DCoreyDuke.CodeBase.Apps\\Program.cs",
+              "RelativeDocumentMoniker": "..\\DCoreyDuke.CodeBase.Apps\\Program.cs",
+              "ToolTip": "C:\\Users\\dcore\\source\\repos\\dcoreydukedev\\DCoreyDuke.CodeBase.Apps\\Program.cs",
+              "RelativeToolTip": "..\\DCoreyDuke.CodeBase.Apps\\Program.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAxwA8AAABIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-29T23:21:01.452Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
