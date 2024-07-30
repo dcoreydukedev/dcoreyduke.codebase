@@ -9,6 +9,13 @@ namespace DCoreyDuke.CodeBase.Attributes
     }
 
     [AttributeUsage(AttributeTargets.All)]
+    public class Verifyable : Attribute, IVerifyable
+    {
+        public bool IsVerified { get { return false; } }
+        public DateTime AsOf { get; set; }
+    }
+
+    [AttributeUsage(AttributeTargets.All)]
     public class Verified : Attribute, IVerifyable
     {
         public bool IsVerified { get { return true; } }

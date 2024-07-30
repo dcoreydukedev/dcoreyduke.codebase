@@ -10,7 +10,7 @@
     <licenseUrl>https://licenses.nuget.org/FREE</licenseUrl>
     <description>Codebase created by dcoreyduke</description>
     <copyright>2023, dcoreyduke</copyright>
-    <repository type="git" commit="0f14861689b4a6ba1ee4cdc2d5b5e000eb21954a" />
+    <repository type="git" commit="1ead80ba9d9264cea6928bc63825373cdd085316" />
     <dependencies>
       <group targetFramework=".NETStandard2.1">
         <dependency id="FileHelpers" version="3.4.1" exclude="Build,Analyzers" />

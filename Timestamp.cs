@@ -9,10 +9,6 @@ namespace DCoreyDuke.CodeBase
 {
 
     /// <summary>
-    /// Initializes a new instance of the <see cref=".$Program"/> class.
-    /// </summary>
-
-    /// <summary>
     /// Create a Timestamp
     /// </summary>
     /// <remarks>
