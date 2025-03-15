@@ -2,13 +2,15 @@
  * Author: DCoreyDuke
  ************************************************************************/
 
+using DCoreyDuke.CodeBase.Interfaces;
+using DCoreyDuke.CodeBase.Objects;
 using System;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.RegularExpressions;
 
-namespace DCoreyDuke.CodeBase.Objects.General
+namespace DCoreyDuke.CodeBase.ValueObjects.General
 {
-    public interface IPhoneNumber
+    public interface IPhoneNumber : IValueObject
     {
         string AreaCode { get; }
 
@@ -39,34 +41,34 @@ namespace DCoreyDuke.CodeBase.Objects.General
             {
                 // strip all characters, spaces, etc, except numbers and '+'
                 string cleanValue = Regex.Replace(value, "[^0-9+]", "");
-                this.Value = cleanValue;
+                Value = cleanValue;
                 // Convert to Char Array
                 char[] cleanChars = cleanValue.ToCharArray();
                 // ['+', '1', '1','2', '3', '4', '5', '6', '7', '8', '9', '0']
                 if (cleanChars.Length == 12 && cleanChars[0] == '+')
                 {
                     //Country Code is 2nd in Array
-                    this.CountryCode = cleanChars[1].ToString().Trim();
+                    CountryCode = cleanChars[1].ToString().Trim();
                     // Next 3 are area code
-                    this.AreaCode = new String(cleanChars, 2, 3);
+                    AreaCode = new string(cleanChars, 2, 3);
                     // After Area Code is Prefix
-                    this.Prefix = new string(cleanChars, 5, 3);
+                    Prefix = new string(cleanChars, 5, 3);
                     // Last 4 are Line Number
-                    this.LineNumber = new string(cleanChars, 8, 4);
+                    LineNumber = new string(cleanChars, 8, 4);
                 }
                 // ['1','2', '3', '4', '5', '6', '7', '8', '9', '0']
                 else if (cleanChars.Length == 10)
                 {
                     // Country Code Defaults to 1
-                    this.CountryCode = "1";
+                    CountryCode = "1";
                     // Area Code is first 3
-                    this.AreaCode = new string(cleanChars, 0, 3);
+                    AreaCode = new string(cleanChars, 0, 3);
                     // After Area Code is Prefix
-                    this.Prefix = new string(cleanChars, 3, 3);
+                    Prefix = new string(cleanChars, 3, 3);
                     // Last 4 are Line Number
-                    this.LineNumber = new string(cleanChars, 6, 4);
+                    LineNumber = new string(cleanChars, 6, 4);
                 }
-                this.Type = PhoneNumberType.Default;
+                Type = PhoneNumberType.Default;
             }
             else
             {
@@ -131,10 +133,10 @@ namespace DCoreyDuke.CodeBase.Objects.General
 
         public bool Equals(PhoneNumber other)
         {
-            if ((this.CountryCode == other.CountryCode) &&
-                (this.AreaCode == other.AreaCode) &&
-                (this.Prefix == other.Prefix) &&
-                (this.LineNumber == other.LineNumber))
+            if (CountryCode == other.CountryCode &&
+                AreaCode == other.AreaCode &&
+                Prefix == other.Prefix &&
+                LineNumber == other.LineNumber)
             {
                 return true;
             }
@@ -158,7 +160,7 @@ namespace DCoreyDuke.CodeBase.Objects.General
 
         public override string ToString()
         {
-            return this.Value.Trim();
+            return Value.Trim();
         }
     }
 }

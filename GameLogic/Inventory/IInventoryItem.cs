@@ -6,7 +6,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using DCoreyDuke.CodeBase.Objects.General;
+using DCoreyDuke.CodeBase.ValueObjects.General;
 
 namespace DCoreyDuke.CodeBase.GameLogic.Inventory
 {

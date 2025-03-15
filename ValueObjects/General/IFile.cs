@@ -2,8 +2,9 @@
  * Author: DCoreyDuke
  ************************************************************************/
 
-namespace DCoreyDuke.CodeBase.Objects.General
+namespace DCoreyDuke.CodeBase.ValueObjects.General
 {
+    using DCoreyDuke.CodeBase.Interfaces;
     using System;
     using System.ComponentModel.DataAnnotations;
 
@@ -34,7 +35,7 @@ namespace DCoreyDuke.CodeBase.Objects.General
         Other
     }
 
-    public interface IFile
+    public interface IFile : IValueObject
     {
         string ContentType { get; set; }
 
@@ -47,7 +48,7 @@ namespace DCoreyDuke.CodeBase.Objects.General
 
     public abstract class File : IFile
     {
-        protected File()
+        private File()
         {
         }
 

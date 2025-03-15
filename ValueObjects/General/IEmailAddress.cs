@@ -6,10 +6,12 @@ using System;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Collections;
 using System.Collections.Generic;
+using DCoreyDuke.CodeBase.Objects;
+using DCoreyDuke.CodeBase.Interfaces;
 
-namespace DCoreyDuke.CodeBase.Objects.General
+namespace DCoreyDuke.CodeBase.ValueObjects.General
 {
-    public interface IEmailAddress
+    public interface IEmailAddress : IValueObject
     {
         char At { get; }
 
@@ -39,10 +41,10 @@ namespace DCoreyDuke.CodeBase.Objects.General
                 if (_Val.IsValid(_Val.EmailAddress, value))
                 {
                     var str = value.Split('@');
-                    this.Username = str[0];
-                    this.Domain = str[1];
-                    this.Value = value;
-                    this.Type = EmailAddressType.Default;
+                    Username = str[0];
+                    Domain = str[1];
+                    Value = value;
+                    Type = EmailAddressType.Default;
                 }
                 else
                 {
@@ -57,7 +59,7 @@ namespace DCoreyDuke.CodeBase.Objects.General
 
         public EmailAddress(string value, EmailAddressType type) : this(value)
         {
-            this.Type = type;
+            Type = type;
         }
 
         private EmailAddress()
@@ -77,7 +79,7 @@ namespace DCoreyDuke.CodeBase.Objects.General
         public int CompareTo(object obj)
         {
             EmailAddress e = (EmailAddress)obj;
-            return String.Compare(this.ToString(), e.ToString());
+            return string.Compare(ToString(), e.ToString());
         }
 
         public bool Equals(EmailAddress other)
@@ -87,7 +89,7 @@ namespace DCoreyDuke.CodeBase.Objects.General
 
         public override int GetHashCode()
         {
-            int hCode = this.ToString().Length + RandomNumberGenerator.Uniform(1, 100);
+            int hCode = ToString().Length + RandomNumberGenerator.Uniform(1, 100);
             return hCode.GetHashCode();
         }
 
@@ -105,7 +107,7 @@ namespace DCoreyDuke.CodeBase.Objects.General
 
         public override string ToString()
         {
-            return this.Value;
+            return Value;
         }
     }
 
@@ -118,7 +120,7 @@ namespace DCoreyDuke.CodeBase.Objects.General
         {
             EmailAddress e1 = (EmailAddress)a;
             EmailAddress e2 = (EmailAddress)b;
-            return String.Compare(e1.Domain, e2.Domain);
+            return string.Compare(e1.Domain, e2.Domain);
         }
     }
 
@@ -131,7 +133,7 @@ namespace DCoreyDuke.CodeBase.Objects.General
         {
             EmailAddress e1 = (EmailAddress)a;
             EmailAddress e2 = (EmailAddress)b;
-            return String.Compare(e1.Username, e2.Username);
+            return string.Compare(e1.Username, e2.Username);
         }
     }
 
@@ -142,7 +144,7 @@ namespace DCoreyDuke.CodeBase.Objects.General
     {
         public bool Equals(EmailAddress x, EmailAddress y)
         {
-            return (String.Compare(x.Value, y.Value) == 0);
+            return string.Compare(x.Value, y.Value) == 0;
         }
 
         public int GetHashCode(EmailAddress obj)

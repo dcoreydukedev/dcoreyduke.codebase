@@ -2,16 +2,18 @@
  * Author: DCoreyDuke
  ************************************************************************/
 
+using DCoreyDuke.CodeBase.Interfaces;
+using DCoreyDuke.CodeBase.Objects;
 using System;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace DCoreyDuke.CodeBase.Objects.General
+namespace DCoreyDuke.CodeBase.ValueObjects.General
 {
     /// <summary>
     /// Detailed Hyperlink
     /// </summary>
     [ComplexType, Serializable]
-    public class Link
+    public class Link : IValueObject
     {
         private readonly RegExValidation _Val = new RegExValidation();
 
@@ -64,9 +66,9 @@ namespace DCoreyDuke.CodeBase.Objects.General
 
         public bool IsValidUrl()
         {
-            if (!string.IsNullOrEmpty(this.LinkUrl))
+            if (!string.IsNullOrEmpty(LinkUrl))
             {
-                return _Val.IsValid(_Val.URL, this.LinkUrl);
+                return _Val.IsValid(_Val.URL, LinkUrl);
             }
             else
             {

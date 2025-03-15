@@ -8,10 +8,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using DCoreyDuke.CodeBase.Interfaces;
+using DCoreyDuke.CodeBase.Objects;
 
-namespace DCoreyDuke.CodeBase.Objects.General
+namespace DCoreyDuke.CodeBase.ValueObjects.General
 {
-    public interface IName
+    public interface IName : IValueObject
     {
         string First { get; }
 
@@ -33,26 +35,26 @@ namespace DCoreyDuke.CodeBase.Objects.General
     {
         public Name(string first, string last)
         {
-            this.Prefix = string.Empty; this.Suffix = string.Empty;
-            this.First = first; this.Middle = string.Empty; this.Last = last;
+            Prefix = string.Empty; Suffix = string.Empty;
+            First = first; Middle = string.Empty; Last = last;
         }
 
         public Name(string first, string middle, string last)
         {
-            this.Prefix = string.Empty; this.Suffix = string.Empty;
-            this.First = first; this.Middle = middle; this.Last = last;
+            Prefix = string.Empty; Suffix = string.Empty;
+            First = first; Middle = middle; Last = last;
         }
 
         public Name(string prefix, string first, string middle, string last)
         {
-            this.Prefix = prefix; this.Suffix = string.Empty;
-            this.First = first; this.Middle = middle; this.Last = last;
+            Prefix = prefix; Suffix = string.Empty;
+            First = first; Middle = middle; Last = last;
         }
 
         public Name(string prefix, string first, string middle, string last, string suffix)
         {
-            this.Prefix = prefix; this.Suffix = suffix;
-            this.First = first; this.Middle = middle; this.Last = last;
+            Prefix = prefix; Suffix = suffix;
+            First = first; Middle = middle; Last = last;
         }
 
         /// <summary>
@@ -76,14 +78,14 @@ namespace DCoreyDuke.CodeBase.Objects.General
             // First, Middle, Last
             if (val.Length == 3)
             {
-                this.Prefix = string.Empty; this.Suffix = string.Empty;
-                this.First = val[0]; this.Middle = val[1]; this.Last = val[2];
+                Prefix = string.Empty; Suffix = string.Empty;
+                First = val[0]; Middle = val[1]; Last = val[2];
             }
             // Prefix, First, Middle, Last, Suffix
             if (val.Length == 5)
             {
-                this.Prefix = val[0]; this.Suffix = val[4];
-                this.First = val[1]; this.Middle = val[2]; this.Last = val[3];
+                Prefix = val[0]; Suffix = val[4];
+                First = val[1]; Middle = val[2]; Last = val[3];
             }
         }
 
@@ -98,23 +100,23 @@ namespace DCoreyDuke.CodeBase.Objects.General
                 var str = value.Split(' ');
                 if (str.Length == 2)
                 {
-                    this.Prefix = string.Empty; this.Suffix = string.Empty;
-                    this.First = str[0]; this.Middle = string.Empty; this.Last = str[1];
+                    Prefix = string.Empty; Suffix = string.Empty;
+                    First = str[0]; Middle = string.Empty; Last = str[1];
                 }
                 else if (str.Length == 3)
                 {
-                    this.Prefix = string.Empty; this.Suffix = string.Empty;
-                    this.First = str[0]; this.Middle = str[1]; this.Last = str[2];
+                    Prefix = string.Empty; Suffix = string.Empty;
+                    First = str[0]; Middle = str[1]; Last = str[2];
                 }
                 else if (str.Length == 4) // Assume prefix
                 {
-                    this.Prefix = str[0]; this.Suffix = string.Empty;
-                    this.First = str[1]; this.Middle = str[2]; this.Last = str[3];
+                    Prefix = str[0]; Suffix = string.Empty;
+                    First = str[1]; Middle = str[2]; Last = str[3];
                 }
                 else if (str.Length == 5)
                 {
-                    this.Prefix = str[0]; this.Suffix = str[4];
-                    this.First = str[1]; this.Middle = str[2]; this.Last = str[3];
+                    Prefix = str[0]; Suffix = str[4];
+                    First = str[1]; Middle = str[2]; Last = str[3];
                 }
             }
             else
@@ -138,7 +140,7 @@ namespace DCoreyDuke.CodeBase.Objects.General
         public int CompareTo(object obj)
         {
             Name n = (Name)obj;
-            return String.Compare(this.ToString(), n.ToString());
+            return string.Compare(ToString(), n.ToString());
         }
 
         public bool Equals(Name other)
@@ -148,7 +150,7 @@ namespace DCoreyDuke.CodeBase.Objects.General
 
         public override int GetHashCode()
         {
-            int hCode = this.ToString().Length + RandomNumberGenerator.Uniform(1, 100);
+            int hCode = ToString().Length + RandomNumberGenerator.Uniform(1, 100);
             return hCode.GetHashCode();
         }
 
@@ -159,25 +161,25 @@ namespace DCoreyDuke.CodeBase.Objects.General
             if (includePeriods == true)
             {
                 // Include M.I.
-                if (!string.IsNullOrEmpty(this.Middle))
+                if (!string.IsNullOrEmpty(Middle))
                 {
-                    str.AppendFormat("{0}.{1}.{2}.", this.First.ToCharArray()[0], this.Middle.ToCharArray()[0], this.Last.ToCharArray()[0]);
+                    str.AppendFormat("{0}.{1}.{2}.", First.ToCharArray()[0], Middle.ToCharArray()[0], Last.ToCharArray()[0]);
                 }
                 else
                 {
-                    str.AppendFormat("{0}.{1}.", this.First.ToCharArray()[0], this.Last.ToCharArray()[0]);
+                    str.AppendFormat("{0}.{1}.", First.ToCharArray()[0], Last.ToCharArray()[0]);
                 }
             }
             else
             {
                 // Include M.I.
-                if (!string.IsNullOrEmpty(this.Middle))
+                if (!string.IsNullOrEmpty(Middle))
                 {
-                    str.AppendFormat("{0}{1}{2}.", this.First.ToCharArray()[0], this.Middle.ToCharArray()[0], this.Last.ToCharArray()[0]);
+                    str.AppendFormat("{0}{1}{2}.", First.ToCharArray()[0], Middle.ToCharArray()[0], Last.ToCharArray()[0]);
                 }
                 else
                 {
-                    str.AppendFormat("{0}{1}.", this.First.ToCharArray()[0], this.Last.ToCharArray()[0]);
+                    str.AppendFormat("{0}{1}.", First.ToCharArray()[0], Last.ToCharArray()[0]);
                 }
             }
 
@@ -191,58 +193,58 @@ namespace DCoreyDuke.CodeBase.Objects.General
 
             if (nameFormat == NameFormat.FirstNameFirst)
             {
-                if (!string.IsNullOrEmpty(this.Prefix))
+                if (!string.IsNullOrEmpty(Prefix))
                 {
-                    sb.Append(this.FirstLetterCapital(this.Prefix));
+                    sb.Append(FirstLetterCapital(Prefix));
                     sb.Append(" ");
                 }
-                if (!string.IsNullOrEmpty(this.FirstLetterCapital(this.First)))
+                if (!string.IsNullOrEmpty(FirstLetterCapital(First)))
                 {
-                    sb.Append(this.First);
+                    sb.Append(First);
                     sb.Append(" ");
                 }
-                if (!string.IsNullOrEmpty(this.FirstLetterCapital(this.Middle)))
+                if (!string.IsNullOrEmpty(FirstLetterCapital(Middle)))
                 {
-                    sb.Append(this.Middle);
+                    sb.Append(Middle);
                     sb.Append(" ");
                 }
-                if (!string.IsNullOrEmpty(this.FirstLetterCapital(this.Last)))
+                if (!string.IsNullOrEmpty(FirstLetterCapital(Last)))
                 {
-                    sb.Append(this.Last);
+                    sb.Append(Last);
                 }
-                if (!string.IsNullOrEmpty(this.FirstLetterCapital(this.Suffix)))
+                if (!string.IsNullOrEmpty(FirstLetterCapital(Suffix)))
                 {
                     sb.Append(" ");
-                    sb.Append(this.Suffix);
+                    sb.Append(Suffix);
                 }
             }
             else if (nameFormat == NameFormat.LastNameFirst)
             {
-                if (!string.IsNullOrEmpty(this.Prefix))
+                if (!string.IsNullOrEmpty(Prefix))
                 {
-                    sb.Append(this.FirstLetterCapital(this.Prefix));
+                    sb.Append(FirstLetterCapital(Prefix));
                     sb.Append(" ");
                 }
-                if (!string.IsNullOrEmpty(this.FirstLetterCapital(this.Last)))
+                if (!string.IsNullOrEmpty(FirstLetterCapital(Last)))
                 {
-                    sb.Append(this.Last);
+                    sb.Append(Last);
                     sb.Append(", ");
                 }
-                if (!string.IsNullOrEmpty(this.FirstLetterCapital(this.First)))
+                if (!string.IsNullOrEmpty(FirstLetterCapital(First)))
                 {
-                    sb.Append(this.First);
+                    sb.Append(First);
                     sb.Append(" ");
                 }
-                if (!string.IsNullOrEmpty(this.FirstLetterCapital(this.Middle)))
+                if (!string.IsNullOrEmpty(FirstLetterCapital(Middle)))
                 {
-                    sb.Append(this.Middle);
+                    sb.Append(Middle);
                     sb.Append(" ");
                 }
 
-                if (!string.IsNullOrEmpty(this.FirstLetterCapital(this.Suffix)))
+                if (!string.IsNullOrEmpty(FirstLetterCapital(Suffix)))
                 {
                     sb.Append(" ");
-                    sb.Append(this.Suffix);
+                    sb.Append(Suffix);
                 }
             }
 
@@ -251,32 +253,32 @@ namespace DCoreyDuke.CodeBase.Objects.General
 
         public int Length()
         {
-            return (this.Prefix.Length + this.First.Length + this.Middle.Length + this.Last.Length + this.Suffix.Length);
+            return Prefix.Length + First.Length + Middle.Length + Last.Length + Suffix.Length;
         }
 
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
 
-            if (!string.IsNullOrEmpty(this.Prefix))
+            if (!string.IsNullOrEmpty(Prefix))
             {
-                sb.Append(this.Prefix + " ");
+                sb.Append(Prefix + " ");
             }
-            if (!string.IsNullOrEmpty(this.First))
+            if (!string.IsNullOrEmpty(First))
             {
-                sb.Append(this.First + " ");
+                sb.Append(First + " ");
             }
-            if (!string.IsNullOrEmpty(this.Middle))
+            if (!string.IsNullOrEmpty(Middle))
             {
-                sb.Append(this.Middle + " ");
+                sb.Append(Middle + " ");
             }
-            if (!string.IsNullOrEmpty(this.Last))
+            if (!string.IsNullOrEmpty(Last))
             {
-                sb.Append(this.Last + " ");
+                sb.Append(Last + " ");
             }
-            if (!string.IsNullOrEmpty(this.Suffix))
+            if (!string.IsNullOrEmpty(Suffix))
             {
-                sb.Append(this.Suffix);
+                sb.Append(Suffix);
             }
             return sb.ToString().Trim();
         }
@@ -297,7 +299,7 @@ namespace DCoreyDuke.CodeBase.Objects.General
         {
             Name n1 = (Name)a;
             Name n2 = (Name)b;
-            return String.Compare(n1.Last, n2.Last);
+            return string.Compare(n1.Last, n2.Last);
         }
     }
 
@@ -309,11 +311,11 @@ namespace DCoreyDuke.CodeBase.Objects.General
         public bool Equals(Name x, Name y)
         {
             // String.Compare(x, y) returns 0 if both strings are the same
-            return ((String.Compare(x.Prefix, y.Prefix) == 0) &&
-                    (String.Compare(x.First, y.First) == 0) &&
-                    (String.Compare(x.Middle, y.Middle) == 0) &&
-                    (String.Compare(x.Last, y.Last) == 0) &&
-                    (String.Compare(x.Suffix, y.Suffix) == 0));
+            return string.Compare(x.Prefix, y.Prefix) == 0 &&
+                    string.Compare(x.First, y.First) == 0 &&
+                    string.Compare(x.Middle, y.Middle) == 0 &&
+                    string.Compare(x.Last, y.Last) == 0 &&
+                    string.Compare(x.Suffix, y.Suffix) == 0;
         }
 
         public int GetHashCode(Name obj)

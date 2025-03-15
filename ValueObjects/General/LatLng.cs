@@ -2,13 +2,14 @@
  * Author: DCoreyDuke
  ************************************************************************/
 
+using DCoreyDuke.CodeBase.Interfaces;
 using System;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace DCoreyDuke.CodeBase.Objects.General
+namespace DCoreyDuke.CodeBase.ValueObjects.General
 {
     [ComplexType, Serializable]
-    public class LatLng<TLattitude, TLongitude>
+    public class LatLng<TLattitude, TLongitude> : IValueObject
     {
         public LatLng(TLattitude lattitude, TLongitude longitude) : this()
         {

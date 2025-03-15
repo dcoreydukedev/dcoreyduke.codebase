@@ -1,0 +1,11 @@
+C:\Users\dcore\source\repos\dcoreydukedev\dcoreyduke.codebase\bin\Debug\net8.0\DCoreyDuke.CodeBase.deps.json
+C:\Users\dcore\source\repos\dcoreydukedev\dcoreyduke.codebase\bin\Debug\net8.0\DCoreyDuke.CodeBase.dll
+C:\Users\dcore\source\repos\dcoreydukedev\dcoreyduke.codebase\obj\Debug\net8.0\DCoreyDuke.CodeBase.csproj.AssemblyReference.cache
+C:\Users\dcore\source\repos\dcoreydukedev\dcoreyduke.codebase\obj\Debug\net8.0\DCoreyDuke.CodeBase.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dcore\source\repos\dcoreydukedev\dcoreyduke.codebase\obj\Debug\net8.0\DCoreyDuke.CodeBase.AssemblyInfoInputs.cache
+C:\Users\dcore\source\repos\dcoreydukedev\dcoreyduke.codebase\obj\Debug\net8.0\DCoreyDuke.CodeBase.AssemblyInfo.cs
+C:\Users\dcore\source\repos\dcoreydukedev\dcoreyduke.codebase\obj\Debug\net8.0\DCoreyDuke.CodeBase.csproj.CoreCompileInputs.cache
+C:\Users\dcore\source\repos\dcoreydukedev\dcoreyduke.codebase\obj\Debug\net8.0\DCoreyDuke.CodeBase.sourcelink.json
+C:\Users\dcore\source\repos\dcoreydukedev\dcoreyduke.codebase\obj\Debug\net8.0\DCoreyDuke.CodeBase.dll
+C:\Users\dcore\source\repos\dcoreydukedev\dcoreyduke.codebase\obj\Debug\net8.0\refint\DCoreyDuke.CodeBase.dll
+C:\Users\dcore\source\repos\dcoreydukedev\dcoreyduke.codebase\obj\Debug\net8.0\ref\DCoreyDuke.CodeBase.dll

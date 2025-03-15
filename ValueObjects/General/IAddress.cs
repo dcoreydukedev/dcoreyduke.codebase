@@ -6,10 +6,12 @@ using System;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 using DCoreyDuke.CodeBase.Attributes;
+using DCoreyDuke.CodeBase.Interfaces;
+using DCoreyDuke.CodeBase.Objects;
 
-namespace DCoreyDuke.CodeBase.Objects.General
+namespace DCoreyDuke.CodeBase.ValueObjects.General
 {
-    public interface IAddress
+    public interface IAddress : IValueObject
     {
         string? Address1 { get; set; }
         string? Address2 { get; set; }
@@ -33,48 +35,48 @@ namespace DCoreyDuke.CodeBase.Objects.General
 
         public Address(string address1, string city, State state, string postalCode) : this()
         {
-            this._address1 = address1;
-            this._city = city;
-            this._state = state;
-            this._postalCode = postalCode;
+            _address1 = address1;
+            _city = city;
+            _state = state;
+            _postalCode = postalCode;
 
         }
 
         public Address(string address1, string city, State state, string postalCode, AddressType type) : this()
         {
-            this._address1 = address1;
-            this._city = city;
-            this._state = state;
-            this._postalCode = postalCode;
-            this._type = type;
+            _address1 = address1;
+            _city = city;
+            _state = state;
+            _postalCode = postalCode;
+            _type = type;
 
         }
         public Address(string address1, string number, string city, State state, string postalCode, AddressType type) : this()
         {
-            this._address1 = address1;
-            this._number = number;
-            this._city = city;
-            this._state = state;
-            this._postalCode = postalCode;
-            this._type = type;
+            _address1 = address1;
+            _number = number;
+            _city = city;
+            _state = state;
+            _postalCode = postalCode;
+            _type = type;
 
         }
 
         public Address(string address1, string address2, string number, string city, State state, string postalCode) : this()
         {
-            this._address1 = address1;
-            this._address2 = address2;
-            this._number = number;
-            this._city = city;
-            this._state = state;
-            this._postalCode = postalCode;
+            _address1 = address1;
+            _address2 = address2;
+            _number = number;
+            _city = city;
+            _state = state;
+            _postalCode = postalCode;
 
         }
 
         public Address(string address1, string address2, string number, string city, State state, string PostalCode, AddressType type) :
             this(address1, address2, number, city, state, PostalCode)
         {
-            this.Type = type;
+            Type = type;
         }
 
         private Address()
@@ -97,12 +99,12 @@ namespace DCoreyDuke.CodeBase.Objects.General
         {
             StringBuilder sb = new StringBuilder();
 
-            if (!string.IsNullOrEmpty(this.Address1)) sb.AppendLine(this.Address1);
-            if (!string.IsNullOrEmpty(this.Address2)) sb.AppendLine(this.Address2);
-            if (!string.IsNullOrEmpty(this.Number)) sb.AppendLine("#: " + this.Number);
-            if (!string.IsNullOrEmpty(this.Region)) sb.AppendLine("Region: " + this.Region);
-            if (!string.IsNullOrEmpty(this.City) && !string.IsNullOrEmpty(this.State.ToString()) && !string.IsNullOrEmpty(this.PostalCode) && !string.IsNullOrEmpty(this.Country.ToString()))
-                sb.AppendLine(this.City + ", " + this.State.ToString() + "  " + this.PostalCode + "  " + this.Country.ToString());
+            if (!string.IsNullOrEmpty(Address1)) sb.AppendLine(Address1);
+            if (!string.IsNullOrEmpty(Address2)) sb.AppendLine(Address2);
+            if (!string.IsNullOrEmpty(Number)) sb.AppendLine("#: " + Number);
+            if (!string.IsNullOrEmpty(Region)) sb.AppendLine("Region: " + Region);
+            if (!string.IsNullOrEmpty(City) && !string.IsNullOrEmpty(State.ToString()) && !string.IsNullOrEmpty(PostalCode) && !string.IsNullOrEmpty(Country.ToString()))
+                sb.AppendLine(City + ", " + State.ToString() + "  " + PostalCode + "  " + Country.ToString());
 
             return sb.ToString();
         }

@@ -9,11 +9,12 @@
     <license type="expression">FREE</license>
     <licenseUrl>https://licenses.nuget.org/FREE</licenseUrl>
     <description>Codebase created by dcoreyduke</description>
-    <copyright>2023, dcoreyduke</copyright>
-    <repository type="git" commit="1ead80ba9d9264cea6928bc63825373cdd085316" />
+    <copyright>2025, dcoreyduke</copyright>
+    <repository type="git" commit="528264b4113e1f545b15fd8337922d1be3a60e43" />
     <dependencies>
-      <group targetFramework=".NETStandard2.1">
+      <group targetFramework="net8.0">
         <dependency id="FileHelpers" version="3.4.1" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.EntityFrameworkCore" version="9.0.3" exclude="Build,Analyzers" />
         <dependency id="System.ComponentModel.Annotations" version="4.7.0" exclude="Build,Analyzers" />
       </group>
     </dependencies>

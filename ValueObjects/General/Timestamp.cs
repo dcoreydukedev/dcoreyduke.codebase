@@ -2,11 +2,26 @@
  * Author: DCoreyDuke
  ************************************************************************/
 
+using DCoreyDuke.CodeBase.Interfaces;
 using System;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace DCoreyDuke.CodeBase
+namespace DCoreyDuke.CodeBase.ValueObjects.General
 {
+    public interface ITimestamp : IValueObject
+    {
+        int Day { get; set; }
+        int Hour { get; set; }
+        int? Milisecond { get; set; }
+        int Minute { get; set; }
+        int Month { get; set; }
+        int? Second { get; set; }
+        int Year { get; set; }
+
+        string GetEpochTimestamp();
+        string GetTimestamp();
+        string ToString();
+    }
 
     /// <summary>
     /// Create a Timestamp
@@ -18,7 +33,7 @@ namespace DCoreyDuke.CodeBase
     /// January 1, 1970 - Wikipedia
     /// </remarks>
     [ComplexType, Serializable]
-    public class Timestamp
+    public class Timestamp : ITimestamp
     {
 
         private DateTime _timestamp;
@@ -28,13 +43,13 @@ namespace DCoreyDuke.CodeBase
         {
             _timestamp = DateTime.Now;
 
-            this.Day = _timestamp.Day;
-            this.Month = _timestamp.Month;
-            this.Year = _timestamp.Year;
-            this.Hour = _timestamp.Hour;
-            this.Minute = _timestamp.Minute;
-            this.Second = _timestamp.Second;
-            this.Milisecond = _timestamp.Millisecond;
+            Day = _timestamp.Day;
+            Month = _timestamp.Month;
+            Year = _timestamp.Year;
+            Hour = _timestamp.Hour;
+            Minute = _timestamp.Minute;
+            Second = _timestamp.Second;
+            Milisecond = _timestamp.Millisecond;
         }
 
 
