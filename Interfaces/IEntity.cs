@@ -8,9 +8,9 @@ namespace DCoreyDuke.CodeBase.Interfaces
 {
     public interface  IEntity
     {
-        int Id{get;}
-        DateTime Created { get; }
-        DateTime Modified { get; }
+        int Id{get;set;}
+        DateTime? CreatedOn { get;set; }
+        DateTime? UpdatedOn { get;set; }
     }
 
 }
