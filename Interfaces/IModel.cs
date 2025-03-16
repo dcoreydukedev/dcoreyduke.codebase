@@ -2,15 +2,17 @@
  * Author: DCoreyDuke
  ************************************************************************/
 
-using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace DCoreyDuke.CodeBase.Interfaces
 {
-    public interface  IEntity
+    public interface IModel
     {
-        int Id{get;}
-        DateTime Created { get; }
-        DateTime Modified { get; }
+        string Name { get; }
+        bool IsValid { get; }
+        List<string> ValidationErrors { get; }
+        bool Validate();
     }
 
 }
