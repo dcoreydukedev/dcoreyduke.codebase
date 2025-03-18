@@ -6,11 +6,11 @@
     <title>DCoreyDuke's Codebase</title>
     <authors>DCoreyDuke</authors>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <license type="expression">FREE</license>
-    <licenseUrl>https://licenses.nuget.org/FREE</licenseUrl>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
     <description>Codebase created by dcoreyduke</description>
     <copyright>2025, dcoreyduke</copyright>
-    <repository type="git" commit="57249651632589d10168bca21643bd8d182df399" />
+    <repository type="git" commit="736b8825f8d35765bb8ad646f56d878f556aa10b" />
     <dependencies>
       <group targetFramework="net8.0">
         <dependency id="FileHelpers" version="3.4.1" exclude="Build,Analyzers" />

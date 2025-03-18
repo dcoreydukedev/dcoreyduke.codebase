@@ -12,7 +12,7 @@
     <Company>DCoreyDuke</Company>
     <Description>Codebase created by dcoreyduke</Description>
     <Copyright>2025, dcoreyduke</Copyright>
-    <PackageLicenseExpression>FREE</PackageLicenseExpression>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <IncludeSymbols>True</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
