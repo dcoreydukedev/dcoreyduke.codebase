@@ -19,6 +19,14 @@ namespace DCoreyDuke.CodeBase.Auth
 
         }
 
+        public AuthUser(string username, string password) : this()
+        {
+            _username = username;
+            _email = string.Empty;
+            _password = password;
+            _roles = new List<AuthRole>();
+        }
+
         public AuthUser(string username, string email, string password) : this()
         {
             _username = username;

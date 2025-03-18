@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCopyrightAttribute("2025, dcoreyduke")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("Codebase created by dcoreyduke")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("2.0.1.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2.0.01+57249651632589d10168bca21643bd8d182df399")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2.0.01+81ded505ef1b9686b91bc9d7e1f3c92bacbe5eef")]
 [assembly: System.Reflection.AssemblyProductAttribute("DCoreyDuke.CodeBase")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DCoreyDuke.CodeBase")]
 [assembly: System.Reflection.AssemblyVersionAttribute("2.0.1.0")]

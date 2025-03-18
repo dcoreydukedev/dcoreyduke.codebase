@@ -37,4 +37,20 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.3" />
     <PackageReference Include="System.ComponentModel.Annotations" Version="4.7.0" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Abstracts\" />
+    <Folder Include="Algorithms\" />
+    <Folder Include="Attributes\" />
+    <Folder Include="Auth\"/>
+    <Folder Include="data\" />
+    <Folder Include="DataStructures\" />
+    <Folder Include="Extensions"/>
+    <Folder Include="Functions"/>
+    <Folder Include="GameLogic"/>
+    <Folder Include="Interfaces"/>
+    <Folder Include="KeyGenerators"/>
+    <Folder Include="ValueObjects"/>
+  </ItemGroup>
+  
 </Project>
