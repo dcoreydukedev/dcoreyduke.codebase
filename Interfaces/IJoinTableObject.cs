@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/*************************************************************************
+ * Author: DCoreyDuke
+ ************************************************************************/
 
 namespace DCoreyDuke.CodeBase.Interfaces
 {
@@ -14,7 +12,12 @@ namespace DCoreyDuke.CodeBase.Interfaces
     {
     }
 
-    public interface IJoinTableObject<TEntity1, TEntity2> : IJoinTableObject
+    /// <summary>
+    /// Defines a join table object interface for two types, facilitating operations between them.
+    /// </summary>
+    /// <typeparam name="TTableObject1">Represents the first type involved in the join operation.</typeparam>
+    /// <typeparam name="TTableObject2">Represents the second type involved in the join operation.</typeparam>
+    public interface IJoinTableObject<TTableObject1, TTableObject2> : IJoinTableObject
     {
     }
 }

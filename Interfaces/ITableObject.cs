@@ -4,9 +4,12 @@
 
 namespace DCoreyDuke.CodeBase.Interfaces
 {
-
-    public interface IJsonSerializable
-    {        
-        public string ToJson();
+    /// <summary>
+    /// Defines a contract for table objects in a database context. 
+    /// It serves as a marker interface without any methods.
+    /// </summary>
+    public interface ITableObject
+    { 
+        
     }
 }
