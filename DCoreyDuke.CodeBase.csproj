@@ -42,15 +42,14 @@
     <Folder Include="Abstracts\" />
     <Folder Include="Algorithms\" />
     <Folder Include="Attributes\" />
-    <Folder Include="Auth\"/>
+    <Folder Include="Auth\" />
     <Folder Include="data\" />
     <Folder Include="DataStructures\" />
-    <Folder Include="Extensions"/>
-    <Folder Include="Functions"/>
-    <Folder Include="GameLogic"/>
-    <Folder Include="Interfaces"/>
-    <Folder Include="KeyGenerators"/>
-    <Folder Include="ValueObjects"/>
+    <Folder Include="Extensions" />
+    <Folder Include="Functions" />
+    <Folder Include="GameLogic" />
+    <Folder Include="KeyGenerators" />
+    <Folder Include="ValueObjects" />
   </ItemGroup>
   
 </Project>
