@@ -6,7 +6,7 @@ using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace DCoreyDuke.CodeBase.Objects
+namespace DCoreyDuke.CodeBase.ValueObjects
 {
     [Serializable]
     public enum AddressType

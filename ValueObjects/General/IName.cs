@@ -9,7 +9,6 @@ using System.Text;
 using System.Collections;
 using System.Collections.Generic;
 using DCoreyDuke.CodeBase.Interfaces;
-using DCoreyDuke.CodeBase.Objects;
 
 namespace DCoreyDuke.CodeBase.ValueObjects.General
 {

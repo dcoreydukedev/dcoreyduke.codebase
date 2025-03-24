@@ -4,15 +4,17 @@
 
 using DCoreyDuke.CodeBase.Interfaces.Auth;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DCoreyDuke.CodeBase.Auth
 {
     public class AuthUser : IAuthUser
     {
-        private string? _username;
-        private string? _email;
-        private string? _password;
+        private readonly string? _username;
+        private readonly string? _email;
+        private readonly string? _password;
         private List<AuthRole>? _roles;
+        private readonly AuthRole? _role;
 
         private AuthUser()
         {
@@ -25,6 +27,7 @@ namespace DCoreyDuke.CodeBase.Auth
             _email = string.Empty;
             _password = password;
             _roles = new List<AuthRole>();
+            _role = null;
         }
 
         public AuthUser(string username, string email, string password) : this()
@@ -33,6 +36,16 @@ namespace DCoreyDuke.CodeBase.Auth
             _email = email;
             _password = password;
             _roles = new List<AuthRole>();
+            _role = null;
+        }
+
+        public AuthUser(string username, string email, string password, AuthRole role) : this()
+        {
+            _username = username;
+            _email = email;
+            _password = password;
+            _role = _role;
+            AddRole(role);
         }
 
         public AuthUser(string username, string email, string password, List<IAuthRole> roles) : this()
@@ -45,6 +58,8 @@ namespace DCoreyDuke.CodeBase.Auth
             {
                 _roles.Add(new AuthRole(role));
             }
+
+            _role = _roles.First();
         }
 
         public AuthUser(string username, string email, string password, List<AuthRole> roles) : this()
@@ -53,6 +68,7 @@ namespace DCoreyDuke.CodeBase.Auth
             _email = email;
             _password = password;
             _roles = roles;
+            _role = _roles.First();
         }
 
         public AuthUser(IAuthUser user) : this()
@@ -66,6 +82,7 @@ namespace DCoreyDuke.CodeBase.Auth
             {
                 _roles.Add(new AuthRole(role));
             }
+            _role = _roles.First();
         }
 
         public string Username

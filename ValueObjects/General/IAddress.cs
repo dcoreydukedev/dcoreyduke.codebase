@@ -7,7 +7,6 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 using DCoreyDuke.CodeBase.Attributes;
 using DCoreyDuke.CodeBase.Interfaces;
-using DCoreyDuke.CodeBase.Objects;
 
 namespace DCoreyDuke.CodeBase.ValueObjects.General
 {
@@ -30,8 +29,8 @@ namespace DCoreyDuke.CodeBase.ValueObjects.General
 
         private string? _address1 = string.Empty, _address2 = string.Empty, _number = string.Empty, _city = string.Empty, _region = string.Empty, _postalCode = string.Empty;
         private AddressType? _type = AddressType.Default;
-        private State? _state = Objects.State.Unknown;
-        private Country? _country = Objects.Country.US;
+        private State? _state = ValueObjects.State.Unknown;
+        private Country? _country = ValueObjects.Country.US;
 
         public Address(string address1, string city, State state, string postalCode) : this()
         {

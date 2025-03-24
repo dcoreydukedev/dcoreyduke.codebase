@@ -3,7 +3,6 @@
  ************************************************************************/
 
 using DCoreyDuke.CodeBase.Interfaces;
-using DCoreyDuke.CodeBase.Objects;
 using System;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.RegularExpressions;
